@@ -1,49 +1,34 @@
-<!-- COURTESY OF NICHE-BLOCK --> 
-<!-- sites.google.com/view/niche-block-3 -->
-<!-- sites.google.com/view/omega-entertainment -->
-
-
 <!DOCTYPE html>
 <html>
 <head>
     <style>
         body, html { margin: 0; padding: 0; height: 100vh; width: 100vw; overflow: auto; }
+        .nb-footer { 
+            position: fixed; bottom: 5px; right: 5px; 
+            font-size: 9px; font-family: sans-serif; 
+            color: rgba(150,150,150,0.5); text-decoration: none; z-index: 9999;
+        }
     </style>
 </head>
 <body>
-
 <div id="render-target"></div>
+<a href="https://sites.google.com/view/niche-block-3" class="nb-footer" target="_blank">Code optimized by Niche-Block</a>
 
 <script>
-    const targetUrl = "https://raw.githubusercontent.com/nicheblock/niche-block/refs/heads/main/html";
-
-    fetch(targetUrl)
-        .then(res => {
-            if (!res.ok) throw new Error('Failed to load GitHub file');
-            return res.text();
-        })
+    fetch("https://raw.githubusercontent.com/nicheblock/niche-block/refs/heads/main/realhtml")
+        .then(res => res.text())
         .then(code => {
             const container = document.getElementById('render-target');
             container.innerHTML = code;
-
-            // ACTIVATING SCRIPTS:
-            // This loop finds any <script> tags in your GitHub code and runs them.
-            // Without this, the code will show up but won't "do" anything.
             const scripts = Array.from(container.querySelectorAll("script"));
             scripts.forEach(oldScript => {
                 const newScript = document.createElement("script");
-                Array.from(oldScript.attributes).forEach(attr => {
-                    newScript.setAttribute(attr.name, attr.value);
-                });
+                Array.from(oldScript.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value));
                 newScript.appendChild(document.createTextNode(oldScript.innerHTML));
                 oldScript.parentNode.replaceChild(newScript, oldScript);
             });
         })
-        .catch(err => {
-            document.body.innerHTML = `<p style="color:red; font-family:sans-serif;">Error: ${err.message}</p>`;
-        });
+        .catch(err => console.error("Error loading code:", err));
 </script>
-
 </body>
 </html>
-
