@@ -16,19 +16,19 @@
             font-family: Arial, sans-serif;
         }
         .hello-text {
-            font-size: 3rem; /* Adjust size as needed */
+            font-size: 3rem;
             font-weight: bold;
             margin-bottom: 10px;
         }
         .hi-text {
-            font-size: 1.5rem; /* Adjust size as needed */
+            font-size: 1.5rem; 
             color: #555555;
         }
     </style>
 </head>
 <body>
-    <div class="hello-text">STOP STEALING MY FUCKING CODE</div>
-    <div class="hi-text">STOP REPLACING NICHE BLOCK ARCADE WITH "BLANKED ARCADE" JS KEEP THE NAME BRO</div>
-    <div class="hi-text">Keep my credit bro</div>
+    <div class="hello-text">An altered version of Niche Block Arcade was deteced</div>
+    <div class="hi-text">This page seems to version of Niche Block that was altered without permission</div>
+    <div class="hi-text">and has therefore been disabled.</div>
 </body>
 </html>
