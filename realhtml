@@ -3,27 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Super Big Image Display</title>
+    <title>STOP!</title>
     <style>
         body {
+            margin: 0;
+            height: 100vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #111; /* Dark background to make the large image pop */
-            overflow: hidden; /* Prevents scrollbars */
+            background-color: #ffffff;
+            font-family: Arial, sans-serif;
         }
-        img {
-            width: 95vw; /* Fills 95% of the viewport width */
-            height: 95vh; /* Fills 95% of the viewport height */
-            object-fit: contain; /* Makes it as big as possible without stretching or cropping */
+        .hello-text {
+            font-size: 3rem; /* Adjust size as needed */
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .hi-text {
+            font-size: 1.5rem; /* Adjust size as needed */
+            color: #555555;
         }
     </style>
 </head>
 <body>
-
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhENHFp0qWH-ghK0RVSAEtNvjShRZTNoWdqw&s" alt="Super Big Image">
-
+    <div class="hello-text">STOP STEALING MY FUCKING CODE</div>
+    <div class="hi-text">STOP REPLACING NICHE BLOCK ARCADE WITH "BLANKED ARCADE" JS KEEP THE NAME BRO</div>
+    <div class="hi-text">Keep my credit bro</div>
 </body>
 </html>
